@@ -43,9 +43,7 @@ public class MemberService {
         m.setPwd(dto.getPwd());
         m.setAge(dto.getAge());
         m.setEmail(dto.getEmail());
-
-        Member member2 = mr.save(m);
-        return new MemberDto(member2);
+        return new MemberDto(m);
     }
 }
 

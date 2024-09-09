@@ -26,6 +26,12 @@ public class MemberDto {
     }
 
     public Member toEntity() {
-        return new Member(id, pwd, email, age, regdate);
+//        return new Member(id, pwd, email, age, regdate);
+        return Member.builder()
+                .id(this.id)
+                .pwd(this.pwd)
+                .email(this.email)
+                .age(this.age)
+                .regdate(this.regdate).build();
     }
 }
